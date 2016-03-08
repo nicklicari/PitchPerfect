@@ -16,11 +16,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-Qw-9IE">
+                                <rect key="frame" x="275.5" y="284.5" width="49" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDa-Qm-McL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-WD-QQg">
+                                <rect key="frame" x="247" y="344" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-b5-tex">
+                                <rect key="frame" x="248" y="388" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWU-bw-wQo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9lv-Qw-9IE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1bb-Mp-ZaP"/>
+                            <constraint firstItem="vcd-WD-QQg" firstAttribute="top" secondItem="9lv-Qw-9IE" secondAttribute="bottom" constant="29.5" id="Fcl-Nc-bcR"/>
+                            <constraint firstItem="9lv-Qw-9IE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LnU-Rc-bJ5"/>
+                            <constraint firstItem="XYq-b5-tex" firstAttribute="centerX" secondItem="vcd-WD-QQg" secondAttribute="centerX" id="R4T-WS-4Tk"/>
+                            <constraint firstItem="vcd-WD-QQg" firstAttribute="centerX" secondItem="9lv-Qw-9IE" secondAttribute="centerX" id="epO-dY-U0A"/>
+                            <constraint firstItem="XYq-b5-tex" firstAttribute="top" secondItem="vcd-WD-QQg" secondAttribute="bottom" constant="23" id="ulQ-9K-9Ss"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="vcd-WD-QQg" id="3WD-bK-asH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="585"/>
         </scene>
     </scenes>
 </document>
