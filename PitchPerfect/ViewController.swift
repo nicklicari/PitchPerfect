@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
-    
+    override func viewWillAppear(animated: Bool) {
+        print("ViewWillAppear called")
+        stopRecordingButton.hidden = true
+        // recommended by old instructor, but would happen if I changed screens while app is already recording?
+        // recordButton.enabled = true
+    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        stopRecordingButton.enabled = false
+//        stopRecordingButton.enabled = false
         
         
     }
@@ -29,8 +35,8 @@ class ViewController: UIViewController {
 
     @IBAction func recordAudio(sender: AnyObject) {
         print("record button was pressed")
-        recordingLabel.text = "Recording in progress"
-        stopRecordingButton.enabled = true
+        recordingLabel.hidden = false
+        stopRecordingButton.hidden = false
         recordButton.enabled = false
         
     }
@@ -38,13 +44,10 @@ class ViewController: UIViewController {
     @IBAction func stopRecording(sender: AnyObject) {
         print("stop recording button pressed")
         recordButton.enabled = true
-        stopRecordingButton.enabled = false
-        recordingLabel.text = "Tap to Record"
+        stopRecordingButton.hidden = true
+        recordingLabel.hidden = true
     }
     
-    override func viewWillAppear(animated: Bool) {
-        print("ViewWillAppear called")
-    }
 
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dvl-jC-gHt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,37 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-Qw-9IE">
-                                <rect key="frame" x="250" y="249" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-Qw-9IE">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <state key="normal" image="microphone"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDa-Qm-McL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-b5-tex">
-                                <rect key="frame" x="274.5" y="422.5" width="50" height="50"/>
-                                <state key="normal" image="stop"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWU-bw-wQo"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-WD-QQg">
-                                <rect key="frame" x="246" y="380" width="107" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcd-WD-QQg">
+                                <rect key="frame" x="270" y="367" width="61.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-b5-tex">
+                                <rect key="frame" x="275" y="402" width="50" height="50"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWU-bw-wQo"/>
+                                    <segue destination="X6e-tZ-AvQ" kind="show" id="waR-Tp-YGW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9lv-Qw-9IE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1bb-Mp-ZaP"/>
-                            <constraint firstItem="vcd-WD-QQg" firstAttribute="top" secondItem="9lv-Qw-9IE" secondAttribute="bottom" constant="30.5" id="Fcl-Nc-bcR"/>
+                            <constraint firstItem="vcd-WD-QQg" firstAttribute="top" secondItem="9lv-Qw-9IE" secondAttribute="bottom" constant="17" id="Fcl-Nc-bcR"/>
                             <constraint firstItem="9lv-Qw-9IE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LnU-Rc-bJ5"/>
-                            <constraint firstItem="XYq-b5-tex" firstAttribute="centerX" secondItem="vcd-WD-QQg" secondAttribute="centerX" id="R4T-WS-4Tk"/>
-                            <constraint firstItem="vcd-WD-QQg" firstAttribute="centerX" secondItem="9lv-Qw-9IE" secondAttribute="centerX" constant="-1" id="epO-dY-U0A"/>
-                            <constraint firstItem="XYq-b5-tex" firstAttribute="top" secondItem="vcd-WD-QQg" secondAttribute="bottom" constant="22" id="ulQ-9K-9Ss"/>
+                            <constraint firstItem="XYq-b5-tex" firstAttribute="centerX" secondItem="vcd-WD-QQg" secondAttribute="centerX" constant="-0.75" id="R4T-WS-4Tk"/>
+                            <constraint firstItem="vcd-WD-QQg" firstAttribute="centerX" secondItem="9lv-Qw-9IE" secondAttribute="centerX" constant="0.75" id="epO-dY-U0A"/>
+                            <constraint firstItem="XYq-b5-tex" firstAttribute="top" secondItem="vcd-WD-QQg" secondAttribute="bottom" constant="18" id="ulQ-9K-9Ss"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Record" id="4ac-pN-Kjr"/>
                     <connections>
                         <outlet property="recordButton" destination="9lv-Qw-9IE" id="QXs-9y-R7F"/>
                         <outlet property="recordingLabel" destination="vcd-WD-QQg" id="3WD-bK-asH"/>
@@ -55,6 +57,42 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fN2-GT-xR3">
+            <objects>
+                <viewController id="X6e-tZ-AvQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwN-zG-a7q"/>
+                        <viewControllerLayoutGuide type="bottom" id="HF3-bk-1iT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fr6-is-hy1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HjA-ZY-J6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ikp-iI-wpa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dvl-jC-gHt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K3P-ff-9ZM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="W6F-2O-nvs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rq8-KD-69G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="429"/>
         </scene>
