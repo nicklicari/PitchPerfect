@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,6 @@
                                 <state key="normal" image="stopButton"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWU-bw-wQo"/>
-                                    <segue destination="X6e-tZ-AvQ" kind="show" id="waR-Tp-YGW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +54,7 @@
                         <outlet property="recordButton" destination="9lv-Qw-9IE" id="QXs-9y-R7F"/>
                         <outlet property="recordingLabel" destination="vcd-WD-QQg" id="3WD-bK-asH"/>
                         <outlet property="stopRecordingButton" destination="XYq-b5-tex" id="R1Q-Ku-g2q"/>
+                        <segue destination="X6e-tZ-AvQ" kind="show" identifier="stopRecording" id="shz-63-rqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
