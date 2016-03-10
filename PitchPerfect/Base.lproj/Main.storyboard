@@ -94,6 +94,13 @@
                                     <action selector="stopAudio:" destination="X6e-tZ-AvQ" eventType="touchUpInside" id="bjI-9O-KQ7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIB-3I-kuo">
+                                <rect key="frame" x="50" y="264" width="100" height="100"/>
+                                <state key="normal" image="chipmunkButton"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="X6e-tZ-AvQ" eventType="touchUpInside" id="aCj-vZ-hVQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,6 +108,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dYK-H1-J6M" secondAttribute="trailing" constant="30" id="Fq2-IL-wWu"/>
                             <constraint firstItem="q8H-7f-RhY" firstAttribute="leading" secondItem="fr6-is-hy1" secondAttribute="leadingMargin" constant="30" id="Hww-J3-HUy"/>
                             <constraint firstItem="q8H-7f-RhY" firstAttribute="top" secondItem="iwN-zG-a7q" secondAttribute="bottom" constant="50" id="TN4-BG-b3L"/>
+                            <constraint firstItem="hIB-3I-kuo" firstAttribute="leading" secondItem="fr6-is-hy1" secondAttribute="leadingMargin" constant="30" id="ldj-Cq-Tjh"/>
+                            <constraint firstItem="hIB-3I-kuo" firstAttribute="top" secondItem="q8H-7f-RhY" secondAttribute="bottom" constant="50" id="moz-uG-rgU"/>
                             <constraint firstItem="J87-Cg-rv5" firstAttribute="centerX" secondItem="fr6-is-hy1" secondAttribute="centerX" id="sEV-ox-Ct9"/>
                             <constraint firstItem="dYK-H1-J6M" firstAttribute="top" secondItem="iwN-zG-a7q" secondAttribute="bottom" constant="50" id="ufG-g7-j8x"/>
                         </constraints>
@@ -130,6 +139,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunkButton" width="100" height="100"/>
         <image name="fastButton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowButton" width="100" height="100"/>
